@@ -18,7 +18,7 @@ https://svs.gsfc.nasa.gov/12021
 https://www.deviantart.com/magentameteorite/art/Saturn-Texture-Map-Fictional-Rework-810793253
 https://www.solarsystemscope.com/textures/
 
-most from solar sysem scope
+most from solarsysemscope.com
  -->
 
 
@@ -29,6 +29,10 @@ most from solar sysem scope
             <a-entity camera position="0 1.6 0" look-controls>
             </a-entity>
         </a-entity>
+        <a-sky
+        color="black"
+        rotation="0 0 0">
+        </a-sky>
 
         <assets>
             <img id="sun" src="assets/sun.jpg">
@@ -62,6 +66,8 @@ side="double"
            src="#sun"
            >
             </a-box>
+<!-- light -->
+<a-light type="point" color="white" position="0 4 0"></a-light>
 
             <!-- murcury -->
             <a-entity position="-5 4 0" animation="property: rotation;
