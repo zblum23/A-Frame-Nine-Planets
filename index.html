@@ -25,7 +25,7 @@ most from solarsysemscope.com
 <body>
     <a-scene>
         <!-- Motion -->
-        <a-entity id="rig" movement-controls="fly: true; speed: 1s">
+        <a-entity id="rig" movement-controls="fly: true; speed: .5">
             <a-entity camera position="0 1.6 0" look-controls>
             </a-entity>
         </a-entity>
@@ -42,16 +42,17 @@ most from solarsysemscope.com
             <img id="neptune" src="assets/neptune.jpg">
             <img id="pluto" src="assets/pluto.jpg">
             <img id="moon" src="assets/moon.jpg">
+            <img id="sky" src="assets/space.jpg">
         </assets>
 
 <!-- plane -->
-<a-plane position="0 0 0"
+<!-- <a-plane position="0 0 0"
 scale="200 200 1"
 color="black"
 rotation="90 0 0"
 side="double"
-></a-plane>
-<a-sky color=" black"
+></a-plane> -->
+<a-sky src="sky"
 rotation=" 0 0 0"></a-sky>
 
         <!-- sun -->
