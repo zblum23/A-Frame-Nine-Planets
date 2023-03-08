@@ -25,8 +25,8 @@ most from solarsysemscope.com
 <body>
     <a-scene>
         <!-- Motion -->
-        <a-entity id="rig" movement-controls="fly: true; speed: .5">
-            <a-entity camera position="0 1.6 0" look-controls>
+        <a-entity id="rig" movement-controls="fly: true; speed: 10">
+            <a-entity camera position="0 1.6 100" look-controls>
             </a-entity>
         </a-entity>
 
@@ -42,7 +42,7 @@ most from solarsysemscope.com
             <img id="neptune" src="assets/neptune.jpg">
             <img id="pluto" src="assets/pluto.jpg">
             <img id="moon" src="assets/moon.jpg">
-            <img id="sky" src="assets/space.jpg">
+            <img id="sky" src="assets/sky.jpg">
         </assets>
 
 <!-- plane -->
@@ -52,8 +52,9 @@ color="black"
 rotation="90 0 0"
 side="double"
 ></a-plane> -->
-<a-sky src="sky"
-rotation=" 0 0 0"></a-sky>
+<a-sky src="#sky"
+rotation=" 0 0 0" 
+radius="10000"></a-sky>
 
         <!-- sun -->
         <a-sphere position="0 4 0" animation="property: rotation;
@@ -61,7 +62,7 @@ rotation=" 0 0 0"></a-sky>
            loop: true;
            dur: 27000;
            easing: linear" 
-           scale="2 2 2"
+           radius="10"
            src="#sun"
            >
             <a-sphere> 
@@ -75,11 +76,11 @@ rotation=" 0 0 0"></a-sky>
               dur: 40000;
               easing: linear;"
               >
-                <a-sphere position="2 1 -0.496" animation="property: rotation;
+                <a-sphere position="-30 1 -0.496" animation="property: rotation;
                to: 0 -360 0;
                loop: true;
                dur: 590;
-               easing: linear" scale=".2 .2 .2"
+               easing: linear" radius=".8"
                src="#mercury">
                 </a-sphere>
             </a-entity>
@@ -90,11 +91,11 @@ rotation=" 0 0 0"></a-sky>
               loop: true;
               dur: 160000;
               easing: linear">
-                <a-sphere position="-10 1 -0.496" animation="property: rotation;
+                <a-sphere position="-50 1 -0.496" animation="property: rotation;
                to: 0 -360 0;
                loop: true;
                dur: 243000;
-               easing: linear" scale=".4 .4 .4"
+               easing: linear" radius="1"
                src="#venus">
                 </a-sphere>
             </a-entity>
@@ -105,26 +106,26 @@ rotation=" 0 0 0"></a-sky>
             loop: true;
             dur: 200000;
             easing: linear">  
-            <a-entity><a-sphere id="earth" src="#earth" position="-14 1 -0.496" animation="property: rotation;
+            <a-entity><a-sphere id="earth" src="#earth" position="-70 1 -0.496" animation="property: rotation;
              to: 0 -360 0;
              loop: true;
              dur: 1000;
-             easing: linear" scale=".4 .4 .4">
+             easing: linear" radius="1.5">
               </a-sphere>
             </a-entity>
            
             <!-- moon -->
-            <a-entity id="moon" position="-14s 1 -0.496 "animation="property: rotation;
+            <a-entity id="moon" position=" -70 1 -0.496 "animation="property: rotation;
             to: 0 360 0;
             loop: true;
-            dur: 100000;
+            dur: 1000;
             easing: linear">
 
-                <a-sphere id="moon" src="#moon" position="1 0 1" animation="property: rotation;
+                <a-sphere id="moon" src="#moon" position="2 0 0" animation="property: rotation;
                 to: 0 -360 0;
                 loop: true;
                 dur: 1000;
-                easing: linear" scale=" .2 .2 .2">
+                easing: linear" radius=".2">
 
             </a-entity>
             </a-entity>
@@ -138,11 +139,11 @@ rotation=" 0 0 0"></a-sky>
           loop: true;
           dur: 400000;
           easing: linear">
-            <a-sphere src="#mars" position="-18 1 -0.496" animation="property: rotation;
+            <a-sphere src="#mars" position="-85 1 -0.496" animation="property: rotation;
            to: 0 -360 0;
            loop: true;
            dur: 1020;
-           easing: linear" scale=".3 .3 .3">
+           easing: linear" radius="1.2">
             </a-sphere>
         </a-entity>
         
@@ -152,11 +153,11 @@ rotation=" 0 0 0"></a-sky>
         loop: true;
         dur: 11860000;
         easing: linear">
-          <a-sphere src="#jupiter" position="-24 1 -0.496" animation="property: rotation;
+          <a-sphere src="#jupiter" position="-100 1 -0.496" animation="property: rotation;
          to: 0 -360 0;
          loop: true;
          dur: 417;
-         easing: linear" scale=".7 .7 .7">
+         easing: linear" radius="4">
           </a-sphere>
       </a-entity>
       
@@ -174,19 +175,19 @@ rotation=" 0 0 0"></a-sky>
       dur: 29000000;
       easing: linear">
        
-      <a-entity id="saturn"><a-sphere src="#saturn" position="-29 1 -0.496" animation="property: rotation;
+      <a-entity id="saturn"><a-sphere src="#saturn" position="-125 1 -0.496" animation="property: rotation;
        to: 0 -360 0;
        loop: true;
        dur: 444;
-       easing: linear" scale=".6 .6 .6">
+       easing: linear" radius="3.75">
         </a-sphere></a-entity>
         <a-entity id="rings">
     <a-torus color="#white" 
     arc="360" 
-    radius="1.2" 
-    radius-tubular="0.05" 
+    radius="4" 
+    radius-tubular=".05" 
     rotation="71.761 146.880 168.782"
-    position="-29 1 -0.548"
+    position="-125 1 -0.548"
     ></a-torus>
     </a-entity>
     </a-entity>
@@ -204,11 +205,11 @@ rotation=" 0 0 0"></a-sky>
     loop: true;
     dur: 84000000;
     easing: linear">
-      <a-sphere src="#uranus" position="-34 1 -0.496" animation="property: rotation;
+      <a-sphere src="#uranus" position="-175 1 -0.496" animation="property: rotation;
      to: 0 -360 0;
      loop: true;
      dur: 719;
-     easing: linear" scale=".5 .5 .5">
+     easing: linear" radius="3">
       </a-sphere>
   </a-entity>
 
@@ -218,11 +219,11 @@ to: 0 360 0;
 loop: true;
 dur: 165000000;
 easing: linear">
-  <a-sphere src="#neptune" position="-44 1 -0.496" animation="property: rotation;
+  <a-sphere src="#neptune" position="-200 1 -0.496" animation="property: rotation;
  to: 0 -360 0;
  loop: true;
  dur: 617;
- easing: linear" scale=".5 .5 .5">
+ easing: linear" radius="3">
   </a-sphere>
 </a-entity>
 
@@ -232,11 +233,11 @@ easing: linear">
     loop: true;
     dur: 248000000;
     easing: linear">
-      <a-sphere src="#pluto" position="-49 1 -0.496" animation="property: rotation;
+      <a-sphere src="#pluto" position="-275 1 -0.496" animation="property: rotation;
      to: 0 -360 0;
      loop: true;
      dur: 6375;
-     easing: linear" scale=".1 .1 .1">
+     easing: linear" radius=".75">
       </a-sphere>
   </a-entity>
 </body>
