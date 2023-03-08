@@ -29,10 +29,6 @@ most from solarsysemscope.com
             <a-entity camera position="0 1.6 0" look-controls>
             </a-entity>
         </a-entity>
-        <a-sky
-        color="black"
-        rotation="0 0 0">
-        </a-sky>
 
         <assets>
             <img id="sun" src="assets/sun.jpg">
@@ -55,6 +51,8 @@ color="black"
 rotation="90 0 0"
 side="double"
 ></a-plane>
+<a-sky color=" black"
+rotation=" 0 0 0"></a-sky>
 
         <!-- sun -->
         <a-sphere position="0 4 0" animation="property: rotation;
@@ -65,18 +63,18 @@ side="double"
            scale="2 2 2"
            src="#sun"
            >
-            </a-box>
+            <a-sphere> 
 <!-- light -->
-<a-light type="point" color="white" position="0 4 0"></a-light>
+<a-entity id="light"><a-light type="ambient" color="white" position="0 4 0"></a-light></a-entity>
 
             <!-- murcury -->
-            <a-entity position="-5 4 0" animation="property: rotation;
+            <a-entity position="0 0 0" animation="property: rotation;
               to: 0 360 0;
               loop: true;
               dur: 400;
               easing: linear;"
               >
-                <a-sphere position="0.572 -3.939 -0.496" animation="property: rotation;
+                <a-sphere position="2 1 -0.496" animation="property: rotation;
                to: 0 -360 0;
                loop: true;
                dur: 590;
@@ -86,12 +84,12 @@ side="double"
             </a-entity>
        
             <!-- venus -->
-        <a-entity position="-10 4 0" animation="property: rotation;
+        <a-entity position="0 0 0" animation="property: rotation;
               to: 0 360 0;
               loop: true;
               dur: 1600;
               easing: linear">
-                <a-sphere position="0.572 -3.939 -0.496" animation="property: rotation;
+                <a-sphere position="-10 1 -0.496" animation="property: rotation;
                to: 0 -360 0;
                loop: true;
                dur: 243000;
@@ -101,12 +99,12 @@ side="double"
             </a-entity>
            
             <!-- earth -->
-            <a-entity id="Earth-Sun" position="-14 4 0" animation="property: rotation;
+            <a-entity id="Earth-Sun" position="0 0 0" animation="property: rotation;
             to: 0 360 0;
             loop: true;
             dur: 2000;
             easing: linear">  
-            <a-entity><a-sphere id="earth" src="#earth" position="0.572 -3.939 -0.496" animation="property: rotation;
+            <a-entity><a-sphere id="earth" src="#earth" position="-14 1 -0.496" animation="property: rotation;
              to: 0 -360 0;
              loop: true;
              dur: 1000;
@@ -115,7 +113,7 @@ side="double"
             </a-entity>
            
             <!-- moon -->
-            <a-entity id="moon" position="0.572 -3.939 -0.496 "animation="property: rotation;
+            <a-entity id="moon" position="-14s 1 -0.496 "animation="property: rotation;
             to: 0 360 0;
             loop: true;
             dur: 1000;
@@ -134,12 +132,12 @@ side="double"
 
             <!-- mars -->
             </a-entity>
-          <a-entity position="-18 4 0" animation="property: rotation;
+          <a-entity position="0 0 0" animation="property: rotation;
           to: 0 360 0;
           loop: true;
           dur: 4000;
           easing: linear">
-            <a-sphere src="#mars" position="0.572 -3.939 -0.496" animation="property: rotation;
+            <a-sphere src="#mars" position="-18 1 -0.496" animation="property: rotation;
            to: 0 -360 0;
            loop: true;
            dur: 1020;
@@ -148,12 +146,12 @@ side="double"
         </a-entity>
         
         <!--jupiter  -->
-        <a-entity position="-24 4 0" animation="property: rotation;
+        <a-entity position="0 0 0" animation="property: rotation;
         to: 0 360 0;
         loop: true;
         dur: 118600;
         easing: linear">
-          <a-sphere src="#jupiter" position="0.572 -3.939 -0.496" animation="property: rotation;
+          <a-sphere src="#jupiter" position="-24 1 -0.496" animation="property: rotation;
          to: 0 -360 0;
          loop: true;
          dur: 417;
@@ -169,13 +167,13 @@ side="double"
 
       <!-- saturn -->
      
-      <a-entity position="-29 4 0" animation="property: rotation;
+      <a-entity position="0 0 0" animation="property: rotation;
       to: 0 360 0;
       loop: true;
       dur: 290000;
       easing: linear">
        
-      <a-entity id="saturn"><a-sphere src="#saturn" position="0.572 -3.939 -0.496" animation="property: rotation;
+      <a-entity id="saturn"><a-sphere src="#saturn" position="-29 1 -0.496" animation="property: rotation;
        to: 0 -360 0;
        loop: true;
        dur: 444;
@@ -187,7 +185,7 @@ side="double"
     radius="1.2" 
     radius-tubular="0.05" 
     rotation="71.761 146.880 168.782"
-    position="0.688 -3.879 -0.548"
+    position="-29 1 -0.548"
     ></a-torus>
     </a-entity>
     </a-entity>
@@ -200,12 +198,12 @@ side="double"
 
 
     <!-- uranus -->
-    <a-entity position="-34 4. 0" animation="property: rotation;
+    <a-entity position="0 0 0" animation="property: rotation;
     to: 0 360 0;
     loop: true;
     dur: 840000;
     easing: linear">
-      <a-sphere src="#uranus" position="0.572 -3.939 -0.496" animation="property: rotation;
+      <a-sphere src="#uranus" position="-34 1 -0.496" animation="property: rotation;
      to: 0 -360 0;
      loop: true;
      dur: 719;
@@ -214,12 +212,12 @@ side="double"
   </a-entity>
 
 <!-- neptune -->
-<a-entity position="-44 4 0" animation="property: rotation;
+<a-entity position="0 0 0" animation="property: rotation;
 to: 0 360 0;
 loop: true;
 dur: 1650000;
 easing: linear">
-  <a-sphere src="#neptune" position="0.572 -3.939 -0.496" animation="property: rotation;
+  <a-sphere src="#neptune" position="-44 1 -0.496" animation="property: rotation;
  to: 0 -360 0;
  loop: true;
  dur: 617;
@@ -228,12 +226,12 @@ easing: linear">
 </a-entity>
 
     <!-- pluto yes it is a planet -->
-    <a-entity position="-49 4 0" animation="property: rotation;
+    <a-entity position="0 0 0" animation="property: rotation;
     to: 0 360 0;
     loop: true;
     dur: 2480000;
     easing: linear">
-      <a-sphere src="#pluto" position="0.572 -3.939 -0.496" animation="property: rotation;
+      <a-sphere src="#pluto" position="-49 1 -0.496" animation="property: rotation;
      to: 0 -360 0;
      loop: true;
      dur: 6375;
